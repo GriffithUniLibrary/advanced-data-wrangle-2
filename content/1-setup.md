@@ -41,9 +41,9 @@ to your `Downloads` folder.{% endcapture %}
 
 ### Online
 
-- You can find out more via the [OpenRefine](http://openrefine.org) website and the [documentation](http://openrefine.org/documentation.html).
-- For advanced tutorials and support go to this [list](https://github.com/OpenRefine/OpenRefine/wiki/External-Resources) created by the OpenRefine community.
-- There is also a [Google Group](https://groups.google.com/forum/#!forum/openrefine) that can answer questions.
+- OpenRefine](http://openrefine.org) website and the [documentation](http://openrefine.org/documentation.html)have excellent guides.
+- [list](https://github.com/OpenRefine/OpenRefine/wiki/External-Resources) ofadvanced tutorials created by the OpenRefine community.
+- This [Google Group](https://groups.google.com/forum/#!forum/openrefine) can answer questions.
 
 ### At Griffith University
 
