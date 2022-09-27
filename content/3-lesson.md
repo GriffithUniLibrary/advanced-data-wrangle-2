@@ -26,14 +26,12 @@ This is when it becomes useful to combine information from multiple columns into
 
 This method allows you to combine the contents of two or more columns, and add a specific string to a column’s values, such as a common separator.
 
-{% capture text %}
 - Go to BOM_GCS_Rain_2017 OpenRefine project
 - At  `Year`  column  `>Edit column > join columns`
 - Tick `Year`, `Month` and `Day` boxes
 - add the separator `-` (dash) between the content of each column so it will match the date format in QldShark_2017_Clean_v2
 - at `Write result in new column named` add `Date`
-- OK.{% endcapture %} 
-{% include card.md header="Add a new column with values from three columns " text=text %}
+- OK.{% endcapture %}{% include card.md header="Add a new column with values from three columns " text=text %}
 
 The image below shows the GREL expression in action. 
 
