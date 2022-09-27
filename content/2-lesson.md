@@ -39,10 +39,3 @@ If OpenRefine does not automatically open within your browser after launch, poin
 {% include card.md header="Preview the data" text=text %}
 
 {% include button.md text="Watch the steps above on this video" link="" color="info" %}
-
-----
-
-<p align="center">
-  <a href="https://griffithunilibrary.github.io/advanced-data-wrangle/content/1-setup.html"><-- BACK</a> |
-  <a href="https://griffithunilibrary.github.io/advanced-data-wrangle/content/3-lesson.html">NEXT --></a>
-</p>
