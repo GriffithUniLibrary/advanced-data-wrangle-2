@@ -16,8 +16,6 @@ Go to [Introduction to Data Cleaning with OpenRefine](https://griffithunilibrary
 The datasets used in this workshop were downloaded and adapted from:
 
 - The State of Queensland (2017). Shark Control Program catch statistics, [https://www.data.qld.gov.au/dataset/shark-control-program-shark-catch-statistics](https://www.data.qld.gov.au/dataset/shark-control-program-shark-catch-statistics). © 2022 The State of Queensland, licensed under a Creative Commons Attribution 4.0 International licence, CC BY 4.0.
-  
-The original dataset present details of numbers of sharks caught in the Shark Control program by species, date of capture and location and other variables.
 
 - Bureau of Meterology (2017). Daily rainfall: Gold Coast Seaway, retrieved 26 September 2022, [http://www.bom.gov.au/climate/data/#textoption](http://www.bom.gov.au/climate/data/#textoption). © Copyright Commonwealth of Australia 2022, Bureau of Meteorology.
 
@@ -43,8 +41,8 @@ to your `Downloads` folder.{% endcapture %}
 
 ### Online
 
-- OpenRefine](http://openrefine.org) website and the [documentation](http://openrefine.org/documentation.html)have excellent guides.
-- [list](https://github.com/OpenRefine/OpenRefine/wiki/External-Resources) of advanced tutorials created by the OpenRefine community.
+- [OpenRefine](http://openrefine.org) website and the [documentation](http://openrefine.org/documentation.html) have excellent guides.
+- A [list](https://github.com/OpenRefine/OpenRefine/wiki/External-Resources) of advanced tutorials created by the OpenRefine community.
 - This [Google Group](https://groups.google.com/forum/#!forum/openrefine) can answer questions.
 
 ### At Griffith University
