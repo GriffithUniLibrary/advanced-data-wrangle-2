@@ -26,7 +26,7 @@ If OpenRefine does not automatically open within your browser after launch, poin
 {% capture text %}
 - Choose `Create Project`
 - Select `Get data from this Computer`.
-- Select `Choose Files` and browse to select the file `QLDTrafficAccidentCleanData_2014_2018.csv` you saved to your `Downloads` folder.
+- Select `Choose Files` and browse to select the file `QldShark_2017_Clean_v1.csv` you saved to your `Downloads` folder.
 - Either click `Open` or double-click on the filename to import it into OpenRefine.
 - Click `Next`.{% endcapture %}
 {% include card.md header="Upload data from your computer" text=text %}
@@ -34,32 +34,11 @@ If OpenRefine does not automatically open within your browser after launch, poin
 
 {% capture text %}
 - Choose `UTF8` as the method of encoding as this should convert any 'smart' formatting into plain text.
-- Give the project a meaningful name such as `TrafficAccident_2018`
+- Give the project a meaningful name such as `QLDShark_2017_Clean_v2`
 - If all looks fine, click  `Create Project`.{% endcapture %}
 {% include card.md header="Preview the data" text=text %}
 
-We only want to work with traffic accident data from `2018` in the `Southern` `Local police region`, lets remove the others.
-
-{% capture text %}
-
-- Go to `Loc_Police_Region > Facet > Text facet` 
-- Remove four choices leaving `Southern`  only (how do we do this?)
-  - `Include`  the four locations
-  - `All column > Edit rows > remove all matching rows` (5232 rows remaining)
-- Close facet
-
-Now let's remove all years apart from `2018`
-
-  - Go to `Crash_Year > Facet > Text facet`
-  - `Include` all years apart from 2018 (4164 matching rows)
-  - Go to `All column > Edit rows > remove all matching rows` (1068 rows remaining)
-- Close facet
-
-The dataset now has a sample of 1068 locations all within the Southern local police region.{% endcapture %}
-{% include card.md header="Limit the dataset" text=text %}
-
-{% include button.md text="Watch the steps above on this video" link="https://vimeo.com/444445583/0f039449e1" color="info" %}
-
+{% include button.md text="Watch the steps above on this video" link="" color="info" %}
 
 ----
 
