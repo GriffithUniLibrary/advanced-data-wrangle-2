@@ -40,10 +40,3 @@ The image below shows the GREL expression in action.
 {% include figure.html img="OpenRefineJoinColumns.png" alt="Add a column with values from three columns" caption="Joining up columns" width="100%" %}
 
 {% include button.md text="watch this video to work through the activity" link="https://vimeo.com/422323847/ae8b0c4414" color="info" %}
-
-----
-
-<p align="center">
-  <a href="https://griffithunilibrary.github.io/advanced-data-wrangle/content/2-lesson.html"><-- BACK</a> |
-  <a href="https://griffithunilibrary.github.io/advanced-data-wrangle/content/4-lesson.html">NEXT --></a>
-</p>
