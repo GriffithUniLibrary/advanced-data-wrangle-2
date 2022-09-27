@@ -38,4 +38,8 @@ If OpenRefine does not automatically open within your browser after launch, poin
 - If all looks fine, click  `Create Project`.{% endcapture %}
 {% include card.md header="Preview the data" text=text %}
 
+The original dataset presents details of numbers of sharks caught in the Shark Control program by species, date of capture and location and other variables. This version of the dataset has ten variables.  Take a look at each variable in the columns presented.
+
+Let's now try to add a few more variables to the dataset.
+
 {% include button.md text="Watch the steps above on this video" link="" color="info" %}
