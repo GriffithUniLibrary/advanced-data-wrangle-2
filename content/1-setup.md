@@ -50,8 +50,3 @@ to your `Downloads` folder.{% endcapture %}
 ### At Griffith University
 
 Help is available from Library specialists at Griffith University.  Contact us [here](https://intranet.secure.griffith.edu.au/library/forms/help) for an online consultation.
-
-<p align="center">
-  <a href="https://griffithunilibrary.github.io/advanced-data-wrangle-2/"><-- BACK</a> |
-  <a href="https://griffithunilibrary.github.io/advanced-data-wrangle-2/content/2-lesson.html">NEXT --></a>
-</p>
