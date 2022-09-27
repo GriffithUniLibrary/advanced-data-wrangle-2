@@ -35,5 +35,5 @@ We need to combine the contents of the columns, and add a specific string to the
 - at  `Write result in new column named`  add  `Date`
 - OK.{% endcapture %}{% include card.md header="Add a new column with values from three columns " text=text %}
 {% include figure.html img="OpenRefineJoinColumns.png" alt="Add a column with values from three columns" caption="Joining up columns" width="100%" %}
-
+The image below illustrates this step.
 {% include button.md text="watch this video to work through the activity" link="https://vimeo.com/422323847/ae8b0c4414" color="info" %}
