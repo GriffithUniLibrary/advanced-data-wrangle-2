@@ -26,8 +26,8 @@ These could be used as a key to match on. The unique key will be in the `BOM_GCS
 
 At present the date is represented in three columns, `Year`, `Month` and `Day`. We need to combine (concatinate) the values of the columns into one column, and add a specific string to the new column’s values, such as a common separator, that matches the format in `QLDShark_2017_Clean_v2`.
 
-- Go to BOM_GCS_Rain_2017 OpenRefine project
-- At  `Year`  column select  `> Edit column > join columns`
+- Go to `BOM_GCS_Rain_2017` OpenRefine project
+- At  `Year`  column select  `Edit column > join columns`
 - Tick  `Year` ,  `Month`  and  `Day`  boxes
 - add the separator  `-` (dash) between the content of each column so it will match the date format in `QldShark_2017_Clean_v2`
 - at   `Write result in new column named`  add  `Date`
@@ -35,5 +35,18 @@ At present the date is represented in three columns, `Year`, `Month` and `Day`. 
 
 The image below illustrates this step.{% endcapture %}{% include card.md header="Add a new column with values from three columns " text=text %}
 {% include figure.html img="OpenRefineJoinColumns.png" alt="Add a column with values from three columns" caption="Joining up columns" width="100%" %}
+
+{% capture text %}
+The final step required is to change the underlining text format of the new date variable in `BOM_GCS_Rain_2017` to a standard ISO date format to match the date in `QldShark_2017_Clean_v2`.
+- In `BOM_GCS_Rain_2017` OpenRefine project
+- Go to `Date` column  `Edit cells > Common transforms > To date`
+
+The cells values are now green and contain values that look like e.g. `2017-01-03T00:00:00Z` in this format yyyy-mm-ddTnn:nn:nnZ.
+
+We want to extract the Rainfall data which is in the column named `Rainfall amount (millimetres)`. It is a long variable name, let's change it.
+- Go to `Rainfall amount (millimetres)` column
+- select `Edit column > Rename this column`
+- add name `Rainfall_mm`
+- Ok.{% endcapture %}{% include card.md header="Change variable from text to date format" text=text %}
 
 {% include button.md text="watch this video to work through the activity - Soon" link="" color="info" %}
