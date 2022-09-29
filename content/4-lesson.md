@@ -25,7 +25,7 @@ Now we can extend the dataset `QldShark_2017_Clean_v2`  with a new variable  `Ra
   - `.cells[“Rainfall_mm”].value`  is a command to add the value from the Rainfall_mm variable to the new column, if there is a match.
 
 - 56 rows of the shark captures now have a new variable & value of rainfall added.
-- `x` close the Text Facet window.
+- `x` close the Text Facet window.{% endcapture %}{% include card.md header="Match a key variable and add a new variable using GREL cell.cross" text=text %}
 
 
 The image below shows the GREL cell.cross expression in action. 
