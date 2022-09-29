@@ -22,7 +22,7 @@ Let's open another instance of OpenRefine to explore the  `BOM_GCS_Rain_2017.csv
   - `Date`  column in  `QldShark_2017_Clean_v2`
   - `Year` ,  `Month` and  `Day` columns in  `BOM_GCS_Rain_2017`.
  
-These could be used as a key to match on. The unique key will be the `BOM_GCS_Rain_2017.csv` as it occurs only once per date and can be matched and added to as many dates as appropriate in the `QLDShark_2017_Clean_v2` data.
+These could be used as a key to match on. The unique key will be in the `BOM_GCS_Rain_2017` dataset as each date only occurs once and can be matched and added to the same date as many times as appropriate in the `QLDShark_2017_Clean_v2` data.
 
 At present the date is represented in three columns, `Year`, `Month` and `Day`. We need to combine (concatinate) the values of the columns into one column, and add a specific string to the new column’s values, such as a common separator, that matches the format in `QLDShark_2017_Clean_v2`.
 
