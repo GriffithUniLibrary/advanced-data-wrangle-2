@@ -11,7 +11,7 @@ The  `cell.cross`  function performs a cross or lookup between two columns in tw
 
 {% capture text %}
 - Go to  `QldShark_2017_Clean_v2`  project
-- Select `Area` column ` > Facet > Text Facet`
+- Select `Area` column `> Facet > Text Facet`
 - Select `Gold Coast` from Text Facet results menu
 
  56 resulting matching rows will display which you can now work with. 
@@ -39,9 +39,9 @@ Let's now extend the dataset `QldShark_2017_Clean_v2`  with another variable  `S
 
 
 {% capture text %}
-`QldShark_2017_Clean_v2` currently contains a variable `Species Name` which is actually the Common names the sharks are known by. Let's change the variable name.
+`QldShark_2017_Clean_v2` currently contains a variable `Species Name` , but the values are actually common names the sharks are known by. Let's change the variable name.
 - Go to  `QldShark_2017_Clean_v2`  project
-- Select `Species Name` column ` > Edit column > Rename this column`
+- Select `Species Name` column `> Edit column > Rename this column`
 - name it `Common name` 
 - `Ok`.
 
