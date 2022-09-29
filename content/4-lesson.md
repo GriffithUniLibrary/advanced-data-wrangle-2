@@ -56,7 +56,7 @@ Next:
 
 As the researcher, you discovered when comparing `QldShark_2017_Clean_v2` to the official list `NESP_SharkSpeciesList` that many of the shark common names are variations or incorrect.  We need to correct the following:
 
-All the "whaler" names in `QldShark_2017_Clean_v2` need to be changed to "shark" as the only whalers identified in `NESP_SharkSpeciesList.csv` were not in the Queensland dataset and all whalers in the Queensland dataset were given the common name "shark" not "whaler". 
+All the "Whaler" names in `QldShark_2017_Clean_v2` need to be changed to "Shark" as the only Whalers identified in `NESP_SharkSpeciesList.csv` were not in the Queensland dataset and all Whalers in the Queensland dataset were given the common name "Shark" not "Whaler". 
 
 This needs to be done to match the values in the key variable accurately.
 - Go to 'Common name' in `QldShark_2017_Clean_v2`
@@ -69,7 +69,7 @@ Then on the same column:
 -`Facet > Text Facet`
 The first shark name is an abbreviation let's make it a full name.
 - highlight `Aus Sharpnose Shark` > `Edit` 
-- Change to ``Australian Sharpnose Shark` > `Apply`
+- Change to `Australian Sharpnose Shark` > `Apply`
 - Leave the `Text facet` window open.
 
 We want to match on unique values in the variables, and at present many of the shark names in `QldShark_2017_Clean_v2` are missing the term Shark in their title.  We can check them against the Common name's in `NESP_SharkSpeciesList`.
@@ -89,7 +89,7 @@ Now that we have cleaned up as many inconsistancies possible, let's match the ke
 - Go to `QldShark_2017_Clean_v2` project
 - at `Common name` select `Edit Column > Add column based on this column`
 - name the new Column  `Species`
-- enter this GREL expression:
+- enter this GREL expression: *(tip: you can reuse and make changes to previous expressions using the `History` tab)*
 
      `cell.cross("NESP_SharkSpeciesList","Common name")[0].cells["Species"].value`
      
@@ -98,9 +98,7 @@ Now that we have cleaned up as many inconsistancies possible, let's match the ke
 382 rows of the shark captures now have a new variable & value of Species added.
 - `x` close the Text Facet window.
 
-Try adding the Genus variable using the same steps as above.{% endcapture %}{% include card.md header="Tidy the data then match a key variable using GREL cell.cross" text=text %}
-
-Try adding the Genus variable using the same steps as above.
+Try adding the `Genus` variable using the same steps as above.{% endcapture %}{% include card.md header="Tidy the data then match a key variable using GREL cell.cross" text=text %}
 
 Find more information on the  `cell.cross`  function [here](https://docs.openrefine.org/manual/grelfunctions#other-functions) and more GREL functions [here](https://docs.openrefine.org/manual/grelfunctions).
 
