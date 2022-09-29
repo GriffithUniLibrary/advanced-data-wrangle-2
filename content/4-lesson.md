@@ -5,7 +5,9 @@ nav: true
 
 # Create the new variable
 
-Now we can extend the dataset `QldShark_2017_Clean_v2`  with a new variable  `Rainfall_mm`  from the `BOM_GCS_Rain_2017`  dataset. We will do this using a GREL expression `cell.cross`. The  `cell.cross`  function performs a cross or lookup between two columns in two datasets or the same dataset. It returns an array (list) of zero or more rows in the project i.e. matching against  `BOM_GCS_Rain_2017`  for which the cells in the column i.e.  `Date`  have the same content as cell  `Date` . 
+Now we can extend the dataset `QldShark_2017_Clean_v2`  with a new variable  `Rainfall_mm`  from the `BOM_GCS_Rain_2017`  dataset. We will do this using a GREL expression `cell.cross`. 
+
+The  `cell.cross`  function performs a cross or lookup between two columns in two datasets or the same dataset. It returns an array (list) of zero or more rows in the project i.e. matching against  `BOM_GCS_Rain_2017`  for which the cells in the column i.e.  `Date`  have the same content as cell  `Date` . 
 
 {% capture text %}
 - Go to  `QldShark_2017_Clean_v2`  project
