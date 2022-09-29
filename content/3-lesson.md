@@ -6,7 +6,7 @@ nav: true
 
 --------
 
-The aim of this lesson is to enhance the  `QldShark_2017_Clean_v1.csv` dataset by adding new variables, to explore if rainfall occurred on the days that sharks were captured and to add scientific names to the common shark names, protection status and distribution values to the dataset where possible. 
+The aim of this lesson is to enhance the  `QldShark_2017_Clean_v2` dataset by adding new variables, to explore if rainfall occurred on the days that sharks were captured and to add scientific names to the common shark names, protection status and distribution values to the dataset where possible. 
 
 The Bureau of Meterology rainfall dataset for the Gold Coast Seaway `BOM_GCS_Rain_2017.csv` and the `NESP_SharkSpeciesList.csv` datasets could be a good matches. We will only match Gold Coast shark captures with the rainfall data in this lesson. It is possible to find and download the other relevant QLD coastal rainfall datasets from BOM.
 
