@@ -7,55 +7,47 @@ nav: true
 
 -----
 
-The  `QLDDriverReviverStations.csv` dataset lists [Driver Reviver](https://www.qld.gov.au/transport/safety/holiday-travel/stops/reviver) rest-stop locations and facilities available across Queensland. We are going to create an interactive map of this data, using geo.json.  However the geo.json tool cannot parse the data yet as it not tidy.
+It would be useful to add the `Distribution` variable from NESP_SharkSpeciesList to QldShark_2017_Clean_v2, but there are multiple values inside the celss of `Distribution`.
 
 To create a [tidy](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html) dataset, where:
 - Each variable forms a column
 - Each observation forms a row
-- Each type of observational unit forms a table,
+- Each cell has one value
+- Each type of observational unit forms a table.
 
-multi-value cells need to be split by the value.  
+multi-value cells need to be split by the value.
 
-This task is helpful where there are multiple values in a cell that are not organised consistently, such as when survey respondents can select multiple, controlled values to answer a question.  The  `Site features`  column in the dataset `QLDDriverReviverStations.csv`  is an example of this. 
+This task is helpful where there are multiple values in a cell that are not organised consistently, such as when survey respondents can select multiple, controlled values to answer a question.  The `Distribution`  column is an example of this. 
 
 {% capture text %}
-- Create a new project with dataset  `QLDDriverReviverStations.csv`  in OpenRefine
-- Name project  `QLDDriverReviverStationsClean` 
-- Go to  `Site features`  column `Facet > Text Facet >` to see multiple values in a messy state.
-
-Let's first check if any rows have missing values.
-- Go to  `Site features`  column
-- `Facet> Customised Facet > Facet by blank`
-
-There are no missing values.
-{% endcapture %} {% include card.md header="Create project" text=text %}
+- Go to  `Distribution`  column `Facet > Text Facet >` to see multiple values in a messy state.
 
 There are a couple of ways to create new columns and move the values to these. The first method requires some cleaning of the data, followed by a GREL command `value.split` with a common separator. 
 
-{% capture text %}
-It appears the original spreadsheet has *hard* returns inside the cells. Remove these with:
+We want to perform a facet by splitting the value, using a common separator.  `Distribution` values do not have common separators, they include `&` `; ` and there appears to be some inconsistencies in the names, with 19 name choices.  Let's sort out the inconsistencies first by trying `leading and trailing whitespace` removal.
+- `Edit cells > Common transforms > Trim leading and trailing whitespace'
+- this fixes 3 values and reduces the Facet to 18 name choices.
 
-- `Edit Cells> Common Transform  > Collapse consecutive whitespace` 
-
-We want to perform a facet by splitting the value, using a common separator.  These values are separated by an asterix * which can be used.  It won't work yet as it has whitespaces around some of the instances. Let's remove these.
+Now lets' change the random separators to one common separator. 
 
 - `Edit Cells > Transform`  and 
-- GREL expression:  `value.replace("* ","*").replace(" *","*")`{% endcapture %} {% include card.md header="Tidy the 'Site features' column" text=text %}
+- GREL expression:  value.replace("&",";")
+- 'Ok'.{% endcapture %} {% include card.md header="Tidy the 'Distribution' column" text=text %}
 
-{% include button.md text="Watch the steps above on this video" link="https://vimeo.com/423056014/f05cff7412" color="info" %}
+{% include button.md text="Watch the steps above on this video- soon" link="" color="info" %}
 
 -----
 
 The next step is to split the values so they can be moved to separate columns. 
 
 {% capture text %}
-- `Facet > Custom text facet > using value.split(“*”)`  to see all value results.
-- These include  `play area`,  `table`,  `universal access toilet`  and  `water`.
+- `Edit cells > Split multi-value cells > by Separator add: ; `
+- `Edit cells > Common transforms > Trim leading and trailing whitespace'` 
 - Click on first Facet result  `Play area` , with 11 results
 - Go to column  `Site features > Edit column> add column based on this column`
-- Type new column name  `Play area`
+- This removes whitespace around 40 values.
 - Click inside expression box, delete  `value`  and type `"Yes"`
-- Preview and ok
+- `Facet > Text facet` to view the Distribution choice
 - Repeat steps above for each of the items owned (can reuse GREL expression from  `history`  tab){% endcapture %} {% include card.md header="Add a new column using value.split" text=text %}
 
 The image below shows the creation of the  `Play area`  column using the method described above.
