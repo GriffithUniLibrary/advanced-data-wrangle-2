@@ -51,8 +51,8 @@ Next:
 - Create a new project using `NESP_SharkSpeciesList.csv` file
 - Name it `NESP_SharkSpeciesList`
 - Look at both datasets, what variables do they have in common?
- - `Common name` in ``NESP_SharkSpeciesList.csv`
- - `Common name` in `NESP_SharkSpeciesList`.
+  - `Common name` in ``NESP_SharkSpeciesList.csv`
+  - `Common name` in `NESP_SharkSpeciesList`.
  - Go to `Common name` for each dataset
  - `Facet > Text facet`
 
@@ -61,7 +61,7 @@ Take a look at the names in each. The `NESP_SharkSpeciesList` dataset contains a
 All the "Whaler" names in `QldShark_2017_Clean_v2` need to be changed to "Shark" as the only Whalers identified in `NESP_SharkSpeciesList` were Bronze and Creek Whaler.  You can perform a filter on `whaler` to check.
 
 We need to clean the inconsistent names to then match the values in the key variable accurately.
-- Go to 'Common name' in `QldShark_2017_Clean_v2`
+- Go to `Common name` in `QldShark_2017_Clean_v2`
 - `Edit cells > Replace`
 - Find: `whaler`
 - tick `case insensitive`
@@ -70,6 +70,7 @@ We need to clean the inconsistent names to then match the values in the key vari
 
 Then on the same column:
 - `Facet > Text Facet`
+
 The first shark name is an abbreviation let's make it a full name.
 - highlight `Aus Sharpnose Shark` > `Edit` 
 - Change to `Australian Sharpnose Shark` > `Apply`
@@ -86,7 +87,7 @@ We want to match on unique values in the variables, and at present many of the s
 - now type `Great Hammerhead` in the `Text filter`
   - note the results are the same, so no changes needed
 - perform a filter for each of the four names above and check if correctly named.
- - note that `Mako` and 'Wobegong` are generic names and we can't identify the species exactly, so we won't be able to match on these.
+ - note that `Mako` and `Wobegong` are generic names and we can't identify the species exactly, so we won't be able to match on these.
 
 Now that we have cleaned up as many inconsistancies possible, let's match the key variables: 
 - Go to `QldShark_2017_Clean_v2` project
