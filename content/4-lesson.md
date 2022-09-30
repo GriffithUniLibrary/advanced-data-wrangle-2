@@ -51,41 +51,44 @@ Next:
 - Create a new project using `NESP_SharkSpeciesList.csv` file
 - Name it `NESP_SharkSpeciesList`
 - Look at both datasets, what variables do they have in common?
- - `Common name` in `QldShark_2017_Clean_v2`
+ - `Common name` in ``NESP_SharkSpeciesList.csv`
  - `Common name` in `NESP_SharkSpeciesList`.
+ - Go to `Common name` for each dataset
+ - `Facet > Text facet`
 
-As the researcher, you discovered when comparing `QldShark_2017_Clean_v2` to the official list `NESP_SharkSpeciesList` that many of the shark common names are variations or incorrect.  We need to correct the following:
+Take a look at the names in each. The `NESP_SharkSpeciesList` dataset contains an authoritative list of Shark common names, Species, Genus, Family and Order names from a scientific project. The `QldShark_2017_Clean_v2` list of names is not authoritative, and many of the shark common names are variations or incorrect.  We need to correct the following:
 
-All the "Whaler" names in `QldShark_2017_Clean_v2` need to be changed to "Shark" as the only Whalers identified in `NESP_SharkSpeciesList.csv` were not in the Queensland dataset and all Whalers in the Queensland dataset were given the common name "Shark" not "Whaler". 
+All the "Whaler" names in `QldShark_2017_Clean_v2` need to be changed to "Shark" as the only Whalers identified in `NESP_SharkSpeciesList` were Bronze and Creek Whaler.  You can perform a filter on `whaler` to check.
 
-This needs to be done to match the values in the key variable accurately.
+We need to clean the inconsistent names to then match the values in the key variable accurately.
 - Go to 'Common name' in `QldShark_2017_Clean_v2`
 - `Edit cells > Replace`
 - Find: `whaler`
 - tick `case insensitive`
 - Replace with: `Shark`
 - `Ok`.
+
 Then on the same column:
--`Facet > Text Facet`
+- `Facet > Text Facet`
 The first shark name is an abbreviation let's make it a full name.
 - highlight `Aus Sharpnose Shark` > `Edit` 
 - Change to `Australian Sharpnose Shark` > `Apply`
 - Leave the `Text facet` window open.
 
-We want to match on unique values in the variables, and at present many of the shark names in `QldShark_2017_Clean_v2` are missing the term Shark in their title.  We can check them against the Common name's in `NESP_SharkSpeciesList`.
+We want to match on unique values in the variables, and at present many of the shark names in `QldShark_2017_Clean_v2` are missing the term "Shark" in their title.  We can check them against the Common name's in `NESP_SharkSpeciesList`.
 
 - Look through the `Text Facet` list in `QldShark_2017_Clean_v2` for names without `Shark` in their name.  These include:
  - `Australian Blacktip`, `Great Hammerhead`, `Mako` and `Wobbegong`
 
 - Go to `Common name` in `NESP_SharkSpeciesList` > `Text filter`
 - type `Australian Blacktip`
- - note the results that the common name needs `Shark` added. Make this change in `QldShark_2017_Clean_v2`
+  - note the results that the common name needs `Shark` added. Make this change in `QldShark_2017_Clean_v2`
 - now type `Great Hammerhead` in the `Text filter`
- - note the results are the same, so no changes needed
+  - note the results are the same, so no changes needed
 - perform a filter for each of the four names above and check if correctly named.
- - note that `Mako` and 'Wobegong` are generic names and we can't identify which species exactly, so won't be able to match on these.
+ - note that `Mako` and 'Wobegong` are generic names and we can't identify the species exactly, so we won't be able to match on these.
 
-Now that we have cleaned up as many inconsistancies possible, let's match the key variables 
+Now that we have cleaned up as many inconsistancies possible, let's match the key variables: 
 - Go to `QldShark_2017_Clean_v2` project
 - at `Common name` select `Edit Column > Add column based on this column`
 - name the new Column  `Species`
@@ -95,10 +98,10 @@ Now that we have cleaned up as many inconsistancies possible, let's match the ke
      
 - Preview and `ok`.
 
-382 rows of the shark captures now have a new variable & value of Species added.
+382 rows of the shark captures now have a new variable & value of `Species` added.
 - `x` close the Text Facet window.
 
-Try adding the `Genus` variable using the same steps as above.{% endcapture %}{% include card.md header="Tidy the data then match a key variable using GREL cell.cross" text=text %}
+*Challenge*: Try adding the `Genus` variable using the same steps as above.{% endcapture %}{% include card.md header="Tidy the data then match a key variable using GREL cell.cross" text=text %}
 
 Find more information on the  `cell.cross`  function [here](https://docs.openrefine.org/manual/grelfunctions#other-functions) and more GREL functions [here](https://docs.openrefine.org/manual/grelfunctions).
 
