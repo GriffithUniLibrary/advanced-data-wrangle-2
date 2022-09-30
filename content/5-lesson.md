@@ -7,7 +7,7 @@ nav: true
 
 -----
 
-It would be useful to add the `Distribution` variable from `NESP_SharkSpeciesList` to `QldShark_2017_Clean_v2`, but there are multiple values inside the cells.
+It would be useful to add the `Distribution` variable from `NESP_SharkSpeciesList` to `QldShark_2017_Clean_v2`, but the data in that column is very messy with multiple values inside the cells. Do a `Text facet` on the `Distribution column` and explore.
 
 To create a [tidy](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html) dataset, where:
 - Each variable forms a column
@@ -17,53 +17,27 @@ To create a [tidy](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-
 
 multi-value cells need to be split by the value.
 
-This task is helpful where there are multiple values in a cell that are not organised consistently, such as when survey respondents can select multiple, controlled values to answer a question, or a notes field has free text.  The `Distribution`  column is an example of this. 
+This task is helpful where there are multiple values in a cell that are not organised consistently, such as when survey respondents can select multiple, controlled values to answer a question, or a notes field has free text.  The `Distribution`  column is an example of this. Let's add the column to `QldShark_2017_Clean_v2` then tidy it.
 
 {% capture text %}
-- Go to  `Distribution`  column `Facet > Text Facet >` to see multiple values in a messy state.
+- Go to `QldShark_2017_Clean_v2`
+- Select `Common name`  column `Edit Column > Add column based on this column`
+- name the new Column `Distribution`
+- enter this GREL expression:
 
-There are a couple of ways to create new columns and move the values to these. The first method requires some cleaning of the data, followed by a GREL command `value.split` with a common separator. 
+  `cell.cross("NESP_SharkSpeciesList","Common name")[0].cells["Distribution"].value`
 
-We want to perform a facet by splitting the value, using a common separator.  `Distribution` values do not have common separators, they include `&` `; ` and there appears to be some inconsistencies in the names, with 19 name choices.  Let's sort out the inconsistencies first by trying `leading and trailing whitespace` removal.
-- `Edit cells > Common transforms > Trim leading and trailing whitespace'
-- this fixes 3 values and reduces the Facet to 18 name choices.
+382 rows of the shark captures now have a new variable & value of `Distribution` added.{% endcapture %}{% include card.md header="Add a new column" text=text %}
 
-Now lets' change the random separators to one common separator. 
-
-- `Edit Cells > Transform`  and 
-- GREL expression: 
-  - `value.replace("&",";")`
-- 'Ok'.{% endcapture %} {% include card.md header="Tidy the 'Distribution' column" text=text %}
-
-{% include button.md text="Watch the steps above on this video- soon" link="" color="info" %}
-
------
-
-The next step is to split the values so they can be moved to separate columns. 
+Now we need to tidy the new variable in `QldShark_2017_Clean_v2`. The following method uses GREL and a language known as Regular Expression or [Regex](https://en.wikipedia.org/wiki/Regular_expression), which searches for patterns in strings. 
 
 {% capture text %}
-- `Edit cells > Split multi-value cells > by Separator add: ; `
-- `Edit cells > Common transforms > Trim leading and trailing whitespace'` 
-- Click on first Facet result  `Play area` , with 11 results
-- Go to column  `Site features > Edit column> add column based on this column`
-- This removes whitespace around 40 values.
-- Click inside expression box, delete  `value`  and type `"Yes"`
-- `Facet > Text facet` to view the Distribution choice
-- Repeat steps above for each of the items owned (can reuse GREL expression from  `history`  tab){% endcapture %} {% include card.md header="Add a new column using value.split" text=text %}
+- Go to`QldShark_2017_Clean_v2`
+- Select column  `Distribution` > Facet > Text Facet`
+- There are 5 choices, a few less than in the "NESP_SharkSpeciesList" so less tidying.  Make a note of the distribution names including, `Australasia`, `Cosmopolitan`, `Indo-Pacific`, `Indo-West Pacific`, Indo-West Pacific`, ` 
 
-The image below shows the creation of the  `Play area`  column using the method described above.
+- Select column  `Distribution` > Edit column> add column based on this column`
 
-{% include figure.html img="ORFacetSplit.JPG" alt="Custom Facet plus add a column" caption="Facet by GREL value.split & Add a column" width="100%" %}
-
-{% include button.md text="See how to perform the value.split function on this video" link="https://vimeo.com/423061477/90ba3be431 " color="info" %}
- 
------
-
-Below is an alternative method using GREL and a language known as Regular Expression or [Regex](https://en.wikipedia.org/wiki/Regular_expression), which searches for patterns in strings.  
-
-{% capture text %}
-- `Undo`  your steps back to Step `0. Create Project` to try this method.- 
-- Go to column  `Site features` > `Edit column> add column based on this column`
 - Type new column name  `Universal access toilet`
 - Click inside expression box, enter GREL expression:
     
@@ -76,7 +50,7 @@ Below is an alternative method using GREL and a language known as Regular Expres
 - Repeat steps above for each of the items owned (can reuse expression from  `history`  tab)
 
 This great [GREL cheat sheet](https://code4libtoronto.github.io/2018-10-12-access/GoogleRefineCheatSheets.pdf) from [code4lib Toronto](https://code4libtoronto.github.io/) has more details on building expressions using Regex.
-{% endcapture %} {% include card.md header="Alternative method - add a new column using GREL & Regex" text=text %}
+{% endcapture %}{% include card.md header="Add a new column using GREL & Regex" text=text %}
 
 See how this works below.
 
