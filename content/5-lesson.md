@@ -47,12 +47,23 @@ Let's change the blank choice to "NULL" as these records do not have any data.
  An additional Distribution column will be created with values only appearing where there had previously been two values in the original cell.  
 {% endcapture %}{% include card.md header="Split a multi-value column" text=text %}
 
-
-
+Now let's explore the column `Notes on skies and wind`. It is messy and contains multiple values within the cells. Ultimately we will create multiple columns using GREL and a language known as Regular Expression or [Regex](https://en.wikipedia.org/wiki/Regular_expression), which searches for patterns in strings.  
 
 {% capture text %}
+- 
 - Repeat steps above for each of the Distribution location names, making new column names Distribution2, Distribution3 etc. (can reuse expression from  `history`  tab)
-
+- Go to column  `Site features` > `Edit column> add column based on this column`
+- Type new column name  `Universal access toilet`
+- Click inside expression box, enter GREL expression:
+    
+    `if(value.contains("Universal access toilet"),"Yes",value).replace(/.*[^Yes].*/,"")`
+    
+    This means...
+    if (the value in the cell contains "Universal access toilet", replace it with "Yes" value), then replace (anything that is not "Yes" that is found one or more times in the cell, with "" ie. a blank).
+    
+- Preview and ok
+- Repeat steps above for each of the items owned (can reuse expression from  `history`  tab)
+- Repeat steps above for each of the Distribution location names, making new column names Distribution2, Distribution3 etc. (can reuse expression from  `history`  tab)
 This great [GREL cheat sheet](https://code4libtoronto.github.io/2018-10-12-access/GoogleRefineCheatSheets.pdf) from [code4lib Toronto](https://code4libtoronto.github.io/) has more details on building expressions using Regex.
 {% endcapture %}{% include card.md header="Add a new column using GREL & Regex" text=text %}
 
