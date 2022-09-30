@@ -6,7 +6,7 @@ nav: true
 ----
 #### Create an interactive map of the data using geojson.io
 
-Now for the next exciting step, to map the  `Driver Reviver`  data via latitude and longitude points.  You can use any spreadsheet tool to prepare a list of coordinate points.   
+Now for the next exciting step, to map `QldShark_2017_Clean_v2` data via latitude and longitude points.  You can use any spreadsheet tool to prepare a list of coordinate points.   
 
 {% capture text %}
 GeoJSON is popular, open format for map data, and works across many tools.  A GitHub repository can automatically display any GeoJSON files in a map view using [Open Street Map](https://www.openstreetmap.org).
@@ -18,9 +18,11 @@ We will create a map using [geojson.io](http://geojson.io), an open source tool 
 
 {% capture text %}
 - Open [http://geojson.io](http://geojson.io)
-- Find the  `QLDDriverReviverStationsClean.csv` file 
-- `Drag the file` onto the map.  
-- Look at features – change  `file view`  from  `JSON`  to  `table`  to see the data structured for the human eye. 
+- Select `Open` > File` 
+- Find the  `QldShark_2017_Clean_v2` file in your downloads and `open`
+    -  You can alos `Drag the file` onto the map.  
+- Zoom into the map to see the coastline of Queensland. 
+- Look at features on the right hand window – change  `file view`  from  `JSON`  to  `table`  to see the data structured for the human eye. 
 - Click on a  `point`  to show data 
 - Untick  `Show style properties`  and save
 - Save file as GEOJSON file into downloads.{% endcapture %} {% include card.md header="Map data with GEOJSON" text=text %}
@@ -44,9 +46,8 @@ In this next activity learn how Github works and create a repository to host the
 - Go to your newly created  `Hello World` repository
 - Select  `Upload file`
 - `Drag and drop`  your newly created  `map.geojson`  file 
-- Name it  `Driver Reviver Stations`
-- You have just published in interactive map with data!{% endcapture %} {% include card.md header="Upload map to Github" text=text %}
-
+- Name it  `Qld_Shark_Captures_2017`
+- Congratulations!  You have just published in interactive map with data!{% endcapture %} {% include card.md header="Upload map to Github" text=text %}
 
 See the steps illustrated below.
 
@@ -57,7 +58,7 @@ See the steps illustrated below.
 {% include figure.html img="ADORGitUpload.JPG" alt="Upload a file to Github repo" caption="Select the map.Geojson file" width="100%" %}
 
 
-**Congratulations! You did it!**
+**Congratulations! You have finished the Advanced data wrangling lessons!**
 
 ----
 
