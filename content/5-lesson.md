@@ -50,6 +50,7 @@ Let's change the blank choice to "NULL" as these records do not have any data.
 
 
 
+{% capture text %}
 - Repeat steps above for each of the Distribution location names, making new column names Distribution2, Distribution3 etc. (can reuse expression from  `history`  tab)
 
 This great [GREL cheat sheet](https://code4libtoronto.github.io/2018-10-12-access/GoogleRefineCheatSheets.pdf) from [code4lib Toronto](https://code4libtoronto.github.io/) has more details on building expressions using Regex.
