@@ -50,22 +50,57 @@ Let's change the blank choice to "NULL" as these records do not have any data.
 Now let's explore the column `Notes on skies and wind`. It is messy and contains multiple values within the cells. Ultimately we will create multiple columns using GREL and a language known as Regular Expression or [Regex](https://en.wikipedia.org/wiki/Regular_expression), which searches for patterns in strings.  
 
 {% capture text %}
-- 
-- Repeat steps above for each of the Distribution location names, making new column names Distribution2, Distribution3 etc. (can reuse expression from  `history`  tab)
-- Go to column  `Site features` > `Edit column> add column based on this column`
-- Type new column name  `Universal access toilet`
+- Go to column `Notes on skies and wind`
+- Select `Facet > Text facet` and explore the 38 choices
+
+Notice all the variations in common separators, order of variables and case format. We cannot split the variable into multiple columns using the method.
+- Hover over the `(blank)` choice select `edit` and change `(blank)` to `NULL`
+- Select `Edit cells > Common transforms > to lower case` to make the case consistent throughout the cell
+- Select `Edit column> add column based on this column`
+- Type new column name  `Overcast`
 - Click inside expression box, enter GREL expression:
     
-    `if(value.contains("Universal access toilet"),"Yes",value).replace(/.*[^Yes].*/,"")`
+    `if(value.contains("overcast"),"overcast",value).replace(/.*[^overcast].*/,"")`
     
     This means...
-    if (the value in the cell contains "Universal access toilet", replace it with "Yes" value), then replace (anything that is not "Yes" that is found one or more times in the cell, with "" ie. a blank).
+    if (the value in the cell contains "overcast", replace it with "overcast" value), then replace (anything that is not "overcast" that is found one or more times in the cell, with "" ie. a blank).
     
 - Preview and ok
-- Repeat steps above for each of the items owned (can reuse expression from  `history`  tab)
-- Repeat steps above for each of the Distribution location names, making new column names Distribution2, Distribution3 etc. (can reuse expression from  `history`  tab)
+- Repeat steps above for the other Sky related value `fine` (can reuse expression from  `history`  tab)
+
+Now let's join up the two columns `fine` and `overcast` which are really values, into a new variable `Skies`
+- Go to `fine` column `Edit column > Join columns...`
+- Select `fine` and `overcast` from tick box list
+- Select `Write result in new column named...`
+- Type `Skies` and `ok`.
+
+We now have a new variable `Skies`. Perform and text facet to see the value choices.
+- Hover over `(blank)` choice select `edit` and type `NULL` and `Apply`. Now each cell has data.
+
+Next we can extract all the "wind" data into a new variable using the steps above.
+
+- Select `Edit column> add column based on this column`
+- Type new column name  `strong breeze`
+- Click inside expression box, enter GREL expression:
+    
+    `if(value.contains("strong breeze"),"strong breeze",value).replace(/.*[^strong breeze].*/,"")`
+- Preview and ok
+- Repeat steps above for the other "wind" related values that can be found in the `Text facet window` including `strong gale`, `calm winds`, `near gale`, `light winds`, `gale force`, `light breeze`  (can reuse expression from  `history`  tab).
+
+Now let's join up the seven columns `strong gale`, `calm winds`, `strong breeze`, `near gale`, `light winds`, `gale force`, `light breeze` which are really values, into a new variable `Wind`
+- Go to `near gale` column `Edit column > Join columns...`
+- Select `strong gale`, `calm winds`, `strong breeze`, `near gale`, `light winds`, `gale force`, `light breeze` from tick box list
+- Select `Write result in new column named...` 
+- Type `Wind` and `ok`.
+
+We now have a new variable `Wind`. Perform a text facet to see the value choices.
+- Hover over `(blank)` choice select `edit` and type `NULL` and `Apply`. Now each cell has data.
+- Go to `All` column `Edit columns > Re-order / remove columns...`
+- Drag and drop the following columns to remove: `fine`, `Notes on skies and wind`, `  `near gale`,`strong gale`, `calm winds`, `strong breeze`, `near gale`, `light winds`, `gale force` and `light breeze`
+- `ok`.
+
 This great [GREL cheat sheet](https://code4libtoronto.github.io/2018-10-12-access/GoogleRefineCheatSheets.pdf) from [code4lib Toronto](https://code4libtoronto.github.io/) has more details on building expressions using Regex.
-{% endcapture %}{% include card.md header="Add a new column using GREL & Regex" text=text %}
+{% endcapture %}{% include card.md header="Add new columns using GREL & Regex" text=text %}
 
 See how this works below.
 
@@ -79,9 +114,9 @@ The final step is to export specific variables from this tidy dataset to a .csv 
 
 {% capture text %}
 - Go to  `All` column  `>Edit Columns> Reorder Remove columns`
-- Drag and drop the columns not needed including `Site Features`, `Site specific alerts`, `Site and Access Comments`, `GPS coordinates`, `Access Direction`, `Upcoming operation dates`, `signed`, `camping limitations` to the `remove` box.
-- `Title`, `Latitude`, `Longitude`, `Location Description`, `Water`, `Universal access toilet`, `Table`, `Play area`, `Barbecue`  will remain
-- Ok
+- Drag and drop the columns not needed including `Species Code`,`Date`, `Area`, `Location`, ` Genus`, `Species`, `Distribution`, `Distribution1`,  to the `remove` box.
+- `Common name`, `Latitude`, `Longitude`, `Length (m)`, `Rainfall_mm`, `Formatted Date`, `Water Temp (C)`, `Skies`, `Wind`  will remain
+- `Ok`
 - Click `Export` button, top right hand corner
 - Select Comma-separated value dataset
 - save file{% endcapture %} {% include card.md header="Export selected columns to .csv file" text=text %}
