@@ -7,17 +7,17 @@ nav: true
 
 -----
 
-It would be useful to add the `Distribution` variable from NESP_SharkSpeciesList to QldShark_2017_Clean_v2, but there are multiple values inside the celss of `Distribution`.
+It would be useful to add the `Distribution` variable from `NESP_SharkSpeciesList` to `QldShark_2017_Clean_v2`, but there are multiple values inside the cells.
 
 To create a [tidy](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html) dataset, where:
 - Each variable forms a column
 - Each observation forms a row
 - Each cell has one value
-- Each type of observational unit forms a table.
+- Each type of observational unit forms a table,
 
 multi-value cells need to be split by the value.
 
-This task is helpful where there are multiple values in a cell that are not organised consistently, such as when survey respondents can select multiple, controlled values to answer a question.  The `Distribution`  column is an example of this. 
+This task is helpful where there are multiple values in a cell that are not organised consistently, such as when survey respondents can select multiple, controlled values to answer a question, or a notes field has free text.  The `Distribution`  column is an example of this. 
 
 {% capture text %}
 - Go to  `Distribution`  column `Facet > Text Facet >` to see multiple values in a messy state.
@@ -31,7 +31,8 @@ We want to perform a facet by splitting the value, using a common separator.  `D
 Now lets' change the random separators to one common separator. 
 
 - `Edit Cells > Transform`  and 
-- GREL expression:  value.replace("&",";")
+- GREL expression: 
+  - `value.replace("&",";")`
 - 'Ok'.{% endcapture %} {% include card.md header="Tidy the 'Distribution' column" text=text %}
 
 {% include button.md text="Watch the steps above on this video- soon" link="" color="info" %}
