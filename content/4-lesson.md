@@ -34,6 +34,9 @@ The image below shows the GREL cell.cross expression in action.
  
 {% include figure.html img="OpenRefineCellCrossShark.PNG" alt="Add a column matching with a key id using GREL cell.cross" caption="Add a column matching with a key id using GREL cell.cross" width="100%" %}
 
+##### Follow the steps in this video.
+<div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/783103369?h=926498486d&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="GRELCellCross.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
 
 Let's now extend the dataset `QldShark_2017_Clean_v2`  with another variable  `Species`  from the `NESP_SharkSpeciesList.csv`  dataset. 
 
