@@ -29,7 +29,7 @@ This task is helpful where there are multiple values in a cell that are not orga
 
 382 rows of the shark captures now have a new variable & value of `Distribution` added.{% endcapture %}{% include card.md header="Add a new column" text=text %}
 
-Now we need to tidy the new variable in `QldShark_2017_Clean_v2`, The then split the column into two columns with a value in each.
+Now we need to tidy the new variable in `QldShark_2017_Clean_v2`, then split the column into two columns with a value in each.
 
 {% capture text %}
 - Go to `QldShark_2017_Clean_v2`
