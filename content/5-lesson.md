@@ -34,7 +34,7 @@ Now we need to tidy the new variable in `QldShark_2017_Clean_v2`, The then split
 {% capture text %}
 - Go to `QldShark_2017_Clean_v2`
 - Select column  `Distribution > Facet > Text Facet`
-- There are 7 choices. Two of the choice show two values within e.g. Australasia & Indonesia. The multiple do not contain a common separator, which will need fixing to be able to split on.
+- There are 7 choices. Two of the choices contain two values within the cells e.g. Australasia & Indonesia. The multiple values do not contain a common separator.  This will need fixing to be able to split on.
 
 Let's change the blank choice to "NULL" as these records do not have any data.
 - In `Distribution` Facet box hover over `(blank)`
