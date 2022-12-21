@@ -3,7 +3,7 @@ title: Key
 nav: true
 ---
 
-# Create the new variables
+# Create new variables
 
 Now we can extend the dataset `QldShark_2017_Clean_v2`  with a new variable  `Rainfall_mm`  from the `BOM_GCS_Rain_2017`  dataset. We will do this using a GREL expression `cell.cross`. 
 
@@ -110,8 +110,9 @@ Now that we have cleaned up as many inconsistancies possible, let's match the ke
 
 Find more information on the  `cell.cross`  function [here](https://docs.openrefine.org/manual/grelfunctions#other-functions) and more GREL functions [here](https://docs.openrefine.org/manual/grelfunctions).
 
+##### Watch the GREL cell.cross activity on this video
 
-{% include button.md text="Watch the GREL cell.cross activity on this video - soon" link="" color="info" %}
+<div style="padding:66.59% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/783187069?h=17c66541b0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Tidy data then match a key variable using GREL cell.cross"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 ----
 
