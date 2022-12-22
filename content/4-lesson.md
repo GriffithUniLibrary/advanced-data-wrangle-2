@@ -11,6 +11,10 @@ The  `cell.cross`  function performs a cross or lookup between two columns in tw
 
 {% capture text %}
 - Go to  `QldShark_2017_Clean_v2`  project
+Firstly let's transform the `Date` column to a date format.
+- Select `Date` column > Edit cells > Common transforms > To date`
+
+Now
 - Select `Area` column `> Facet > Text Facet`
 - Select `Gold Coast` from Text Facet results menu
 
