@@ -44,12 +44,11 @@ Let's change the blank choice to "NULL" as these records do not have any data.
 - Select `Edit column > Split in several columns > by separator *;* > Split into *2* columns`
 - `ok`.
  
- An additional Distribution column will be created with values only appearing where there had previously been two values in the original cell.  
- 
- ##### Watch these steps in the video below.
- 
- <div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/783496236?h=3079029ca3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="TidySplitMultiOpenRefine.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-{% endcapture %}{% include card.md header="Split a multi-value column" text=text %}
+ An additional Distribution column will be created with values only appearing where there had previously been two values in the original cell.{% endcapture %}{% include card.md header="Split a multi-value column" text=text %}
+
+##### Watch these steps in this video.
+
+<div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/783496236?h=3079029ca3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="TidySplitMultiOpenRefine.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 Now let's explore the column `Notes on skies and wind`. It is messy and contains multiple values within the cells. Ultimately we will create multiple columns using GREL and a language known as Regular Expression or [Regex](https://en.wikipedia.org/wiki/Regular_expression), which searches for patterns in strings.  
 
