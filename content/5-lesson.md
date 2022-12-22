@@ -111,7 +111,7 @@ The final step is to export specific variables from this tidy dataset to a .csv 
 
 {% capture text %}
 - Go to  `All` column  `>Edit Columns> Reorder Remove columns`
-- Drag and drop the columns not needed including `Species Code`,`Date`, `Area`, `Location`, ` Genus`, `Species`, `Distribution`, `Distribution1`,  to the `remove` box.
+- Drag and drop the columns not needed including `Species Code`, `Date`, `Area`, `Location`, ` Genus`, `Species`, `Distribution`, `Distribution1`,  to the  `remove` box.
 - `Common name`, `Latitude`, `Longitude`, `Length (m)`, `Rainfall_mm`, `Formatted Date`, `Water Temp (C)`, `Skies`, `Wind`  will remain
 - `Ok`
 - Click `Export` button, top right hand corner
