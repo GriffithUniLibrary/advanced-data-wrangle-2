@@ -102,11 +102,8 @@ We now have a new variable `Wind`. Perform a text facet to see the value choices
 This great [GREL cheat sheet](https://code4libtoronto.github.io/2018-10-12-access/GoogleRefineCheatSheets.pdf) from [code4lib Toronto](https://code4libtoronto.github.io/) has more details on building expressions using Regex.
 {% endcapture %}{% include card.md header="Add new columns using GREL & Regex" text=text %}
 
-See how this works below.
+See how this works in the video below.
 
-{% include figure.html img="ORRegex.JPG" alt="Using Regex" caption="Using Regex" width="100%" %}
-
-{% include button.md text="Watch the steps above on this video - Soon" link="" color="info" %}
 
 ------
 
