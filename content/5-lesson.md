@@ -51,11 +51,11 @@ Now let's explore the column `Notes on skies and wind`. It is messy and contains
 
 {% capture text %}
 - Go to column `Notes on skies and wind`
-- Select `Facet > Text facet` and explore the 38 choices
+- Select `Facet > Text facet` and explore the 36 choices
 
-Notice all the variations in common separators, order of variables and case format. We cannot split the variable into multiple columns using the method.
+Notice the variations in common separators, order of values and case format. We cannot split the variable into multiple columns using the method.
 - Hover over the `(blank)` choice select `edit` and change `(blank)` to `NULL`
-- Select `Edit cells > Common transforms > to lower case` to make the case consistent throughout the cell
+- Select `Edit cells > Common transforms > to lower case` to make the case consistent throughout the cell (and reduce the choices to 31)
 - Select `Edit column> add column based on this column`
 - Type new column name  `Overcast`
 - Click inside expression box, enter GREL expression:
@@ -85,9 +85,9 @@ Next we can extract all the "wind" data into a new variable using the steps abov
     
     `if(value.contains("strong breeze"),"strong breeze",value).replace(/.*[^strong breeze].*/,"")`
 - Preview and ok
-- Repeat steps above for the other "wind" related values that can be found in the `Text facet window` including `strong gale`, `calm winds`, `near gale`, `light winds`, `gale force`, `light breeze`  (can reuse expression from  `history`  tab).
+- Repeat steps above for the other "wind" related values that can be found in the `Text facet window` `near gale` and `light winds` (can reuse expression from  `history`  tab).
 
-Now let's join up the seven columns `strong gale`, `calm winds`, `strong breeze`, `near gale`, `light winds`, `gale force`, `light breeze` which are really values, into a new variable `Wind`
+Now let's join up the 3 columns `strong breeze`, `near gale`, `light winds` which are really values, into a new variable `Wind`
 - Go to `near gale` column `Edit column > Join columns...`
 - Select `strong gale`, `calm winds`, `strong breeze`, `near gale`, `light winds`, `gale force`, `light breeze` from tick box list
 - Select `Write result in new column named...` 
@@ -96,7 +96,7 @@ Now let's join up the seven columns `strong gale`, `calm winds`, `strong breeze`
 We now have a new variable `Wind`. Perform a text facet to see the value choices.
 - Hover over `(blank)` choice select `edit` and type `NULL` and `Apply`. Now each cell has data.
 - Go to `All` column `Edit columns > Re-order / remove columns...`
-- Drag and drop the following columns to remove: `fine`, `Notes on skies and wind`, `  `near gale`,`strong gale`, `calm winds`, `strong breeze`, `near gale`, `light winds`, `gale force` and `light breeze`
+- Drag and drop the following columns to remove: `fine`, `overcast`, `Notes on skies and wind` , `near gale` , `strong breeze`, `light winds`
 - `ok`.
 
 This great [GREL cheat sheet](https://code4libtoronto.github.io/2018-10-12-access/GoogleRefineCheatSheets.pdf) from [code4lib Toronto](https://code4libtoronto.github.io/) has more details on building expressions using Regex.
