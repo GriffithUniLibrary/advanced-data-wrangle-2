@@ -105,8 +105,9 @@ We now have a new variable `Wind`. Perform a text facet to see the value choices
 This great [GREL cheat sheet](https://code4libtoronto.github.io/2018-10-12-access/GoogleRefineCheatSheets.pdf) from [code4lib Toronto](https://code4libtoronto.github.io/) has more details on building expressions using Regex.
 {% endcapture %}{% include card.md header="Add new columns using GREL & Regex" text=text %}
 
-See how this works in the video below.
+##### See how this works in the video below.
 
+<div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/783523616?h=11d4815739&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="NewColumnGRELRegex.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 ------
 
