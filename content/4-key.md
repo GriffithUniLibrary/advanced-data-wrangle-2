@@ -122,5 +122,5 @@ Find more information on the  `cell.cross`  function [here](https://docs.openref
 
 <p align="center">
   <a href="https://griffithunilibrary.github.io/advanced-data-wrangle-2/content/3-find.html"><-- BACK</a> |
-  <a href="https://griffithunilibrary.github.io/advanced-data-wrangle-2/content/content/5-tidy.html">NEXT --></a>
+  <a href="https://griffithunilibrary.github.io/advanced-data-wrangle-2/content/5-tidy.html">NEXT --></a>
 </p>
