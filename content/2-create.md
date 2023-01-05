@@ -44,3 +44,10 @@ Let's now try to add a few more variables to the dataset.
 
 ##### Watch this video for the steps to open the project.
 <div style="padding:66.95% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/782755148?h=96d5e3cb7d&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Create a new project in OpenRefine"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+----
+
+<p align="center">
+  <a href="https://griffithunilibrary.github.io/advanced-data-wrangle-2/content/1-setup.html"><-- BACK</a> |
+  <a href="https://griffithunilibrary.github.io/advanced-data-wrangle-2/content/3-find.html">NEXT --></a>
+</p>
