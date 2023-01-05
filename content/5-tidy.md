@@ -125,8 +125,8 @@ The final step is to export specific variables from this tidy dataset to a .csv 
 ----
 
 <p align="center">
-  <a href="https://griffithunilibrary.github.io/advanced-data-wrangle/content/4-lesson.html"><-- BACK</a> |
-  <a href="https://griffithunilibrary.github.io/advanced-data-wrangle/content/6-lesson.html">NEXT --></a>
+  <a href="https://griffithunilibrary.github.io/advanced-data-wrangle-2/content/4-key.html"><-- BACK</a> |
+  <a href="https://griffithunilibrary.github.io/advanced-data-wrangle-2/content/6-map.html">NEXT --></a>
 </p>
 
 
