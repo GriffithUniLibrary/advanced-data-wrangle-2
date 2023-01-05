@@ -71,6 +71,6 @@ See the steps illustrated below.
 ----
 
 <p align="center">
-  <a href="https://griffithunilibrary.github.io/advanced-data-wrangle-2/content/5-lesson.html"><-- BACK</a> |
-  <a href="https://griffithunilibrary.github.io/advanced-data-wrangle-2/content/7-lesson.html">References --></a>
+  <a href="https://griffithunilibrary.github.io/advanced-data-wrangle-2/content/5-tidy.html"><-- BACK</a> |
+  <a href="https://griffithunilibrary.github.io/advanced-data-wrangle-2/content/7-references.html">References --></a>
 </p>
