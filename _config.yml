@@ -25,7 +25,7 @@ repo: "https://github.com/GriffithUniLibrary/advanced-data-wrangle-2/"
 # site urls
 # add the url for the domain,
 # on gh-pages follow the pattern: https://username.github.io 
-url: https://griffithunilibrary.github.io/
+url: https://griffithunilibrary.github.io
 # add subsection of the domain,
 # on gh-pages this is a / followed by the name of the repository
 baseurl: /advanced-data-wrangle-2/
