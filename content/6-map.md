@@ -27,7 +27,9 @@ We will create a map using [geojson.io](http://geojson.io), an open source tool 
 - Untick  `Show style properties`  and save
 - Save file as GEOJSON file into downloads.{% endcapture %} {% include card.md header="Map data with GEOJSON" text=text %}
 
-{% include button.md text="See how to map the data with GeoJSON.io in this video" link="https://vimeo.com/425012075/174f63e945" color="info" %}
+##### See how to map the data with GeoJSON.io in this video.
+
+<div style="padding:66.59% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/787446253?h=4655fa0b1b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Map a dataset using geojson.io"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 ----
 #### Display the map using Github
