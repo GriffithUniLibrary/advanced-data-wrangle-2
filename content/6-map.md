@@ -20,7 +20,7 @@ We will create a map using [geojson.io](http://geojson.io), an open source tool 
 - Open [http://geojson.io](http://geojson.io)
 - Select `Open` > `File` 
 - Find the  `QldShark_2017_Clean_v2` file in your downloads and `open`
-    -  You can alos `Drag the file` onto the map.  
+    -  You can also `Drag the file` onto the map.  
 - Zoom into the map to see the coastline of Queensland. 
 - Look at features on the right hand window – change  `file view`  from  `JSON`  to  `table`  to see the data structured for the human eye. 
 - Click on a  `point`  to show data 
