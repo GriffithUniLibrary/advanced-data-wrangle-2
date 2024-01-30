@@ -11,7 +11,7 @@
         <div class="col-md">
           <a class="h5" href="{{ '/' | absolute_url }}">{{ site.title }}</a>
           <br>
-          <span class="pl-3"><a href="https://creativecommons.org/licenses/by/4.0/">cc-by</a> Griffith University </span>
+          <span class="pl-3"><a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</a> {{ site.pub_year }} {% if site.github_username %}<a href="https://github.com/{{ site.github_username }}">{{ site.author }}</a>{% else %}{{ site.author }}{% endif %}</span>
         </div>
         <div class="col-md">
           {% if site.search == true %}
